@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->uuid('id');
             $table->string('title');
+            $table->string('subtitle');
             $table->string('image');
             $table->longText('text');
             $table->softDeletesTz();
