@@ -15,7 +15,7 @@ return new class extends Migration
             $table->uuid('id');
             $table->string('title');
             $table->string('subtitle');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->longText('text');
             $table->softDeletesTz();
             $table->timestampsTz();
