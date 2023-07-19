@@ -12,14 +12,22 @@ class CreatePost extends Component
 
     public string $text;
 
+    protected $rules = [
+        'title'=> 'string|required',
+        'subtitle' =>'string|required',
+        'text'=>'string|required'
+    ];
 
     public function save()
     {
+        $this->validate();
+
         Post::create([
             'title'=> $this->title,
             'subtitle'=> $this->subtitle,
             'text'=> $this->text
         ]);
+
         $this->redirectRoute('panel.posts.list');
     }
     public function render()

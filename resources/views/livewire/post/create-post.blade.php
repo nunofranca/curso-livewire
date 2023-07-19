@@ -17,17 +17,17 @@
 
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
-                            <input type="text" wire:model="title" class="form-control" id="title">
+                            <input type="text" wire:model.defer="title" class="form-control" id="title">
 
                         </div>
                         <div class="mb-3">
                             <label for="subtitle" class="form-label">Sub-Title</label>
-                            <input type="text" wire:model="subtitle" class="form-control" id="subtitle">
+                            <input type="text" wire:model.defer="subtitle" class="form-control" id="subtitle">
 
                         </div>
                         <div class="mb-3">
                             <label for="textarea" class="form-label">Texto</label>
-                            <textarea wire:model="text" class="form-control" id="textarea" rows="10"> </textarea>
+                            <textarea wire:model.defer="text" class="form-control" id="textarea" rows="10"> </textarea>
 
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
